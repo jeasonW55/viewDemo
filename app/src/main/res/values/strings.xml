@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">viewDemo</string>
+    <string name="bottom_bt_movie">电影</string>
+    <string name="bottom_bt_cartoon">动漫</string>
+    <string name="bottom_bt_book">书籍</string>
+    <string name="bottom_bt_news">新闻</string>
+    <string name="bottom_bt_browser">浏览器</string>
+    <string name="title_bar_text">标题</string>
+</resources>

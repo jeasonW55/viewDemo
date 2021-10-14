@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/item_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <RelativeLayout
+        android:layout_alignParentTop="true"
+        android:visibility="visible"
+        android:gravity="center"
+        android:id="@+id/item_top_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_below="@id/item_top_layout"
+        android:gravity="center"
+        android:visibility="gone"
+        android:id="@+id/item_bottom_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

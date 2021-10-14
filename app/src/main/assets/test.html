@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Test</title>
+        <meta http-equiv="keywords" content="keyword1, keyword2, keyword3">
+        <meta http-equiv="description" content="this is my page">
+
+        <script type="text/javascript">
+            function showToast(toast) {
+            javascript:window.control.showToast(toast);
+            }
+
+            function log(str) {
+            console.log(str);
+            }
+
+            function nativeLog() {
+                var time = performance.timing;
+                var loadTime = (time.loadEventEnd - time.loadEventStart) / 1000;
+                javascript:control.log(loadTime);
+            }
+
+
+        </script>
+
+        <script src="learn.js"></script>
+    </head>
+<body>
+    <input type="button" value="toast" onclick="showToast('Hello World!')" >
+    <input type="button" value="log" onclick="log('Hello World!')" >
+    <input type="button" value="Android Log" onclick="nativeLog()" >
+    <br>
+    <br>
+    <input type="button" value="learnJs" onclick="showName3()">
+    <br>
+    <br>
+    <input type="button" value="globalScope" onclick="showName4()">
+</body>
+</html>

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_marginTop="@dimen/dp_20"
+        android:background="@drawable/rect_bt_bg"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentTop="true"
+        android:id="@+id/shadowView_tv"
+        android:gravity="center"
+        android:textColor="@color/green"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        android:text="阴影选择控件" />
+
+    <TextView
+        android:layout_marginTop="@dimen/dp_20"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/rect_bt_bg"
+        android:layout_below="@id/shadowView_tv"
+        android:id="@+id/singleItemShowListView_tv"
+        android:gravity="center"
+        android:textColor="@color/green"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        android:text="单显RecyclerView"/>
+
+    <TextView
+        android:layout_marginTop="@dimen/dp_20"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/rect_bt_bg"
+        android:layout_below="@id/singleItemShowListView_tv"
+        android:id="@+id/gotoWeb"
+        android:gravity="center"
+        android:textColor="@color/green"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        android:text="网页JS"/>
+
+    <TextView
+        android:layout_marginTop="@dimen/dp_20"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/rect_bt_bg"
+        android:layout_below="@id/gotoWeb"
+        android:id="@+id/notNameIntent"
+        android:gravity="center"
+        android:textColor="@color/green"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        android:text="测试匿名Intent"/>
+
+    <TextView
+        android:layout_marginTop="@dimen/dp_20"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/rect_bt_bg"
+        android:layout_below="@id/notNameIntent"
+        android:id="@+id/versionName"
+        android:gravity="center"
+        android:textColor="@color/green"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        android:text="版本信息"/>
+
+    <TextView
+        android:layout_marginTop="@dimen/dp_20"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/rect_bt_bg"
+        android:layout_below="@id/versionName"
+        android:id="@+id/bottom_dialog"
+        android:gravity="center"
+        android:textColor="@color/green"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        android:text="底部弹窗"/>
+
+    <TextView
+        android:layout_marginTop="@dimen/dp_20"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/rect_bt_bg"
+        android:layout_below="@id/bottom_dialog"
+        android:id="@+id/otherlayout"
+        android:gravity="center"
+        android:textColor="@color/green"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        android:text="一些布局"/>
+
+
+</RelativeLayout>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.example.viewdemo.fragment.ui.BottomNavigatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent">
+
+    <Button
+        android:text="@string/bottom_bt_movie"
+        android:layout_marginStart="@dimen/dp_10"
+        android:layout_marginVertical="@dimen/dp_10"
+        android:id="@+id/bottom_bt_1"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"/>
+
+    <Button
+        android:text="@string/bottom_bt_cartoon"
+        android:layout_marginStart="@dimen/dp_10"
+        android:layout_marginVertical="@dimen/dp_10"
+        android:id="@+id/bottom_bt_2"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"/>
+
+    <Button
+        android:text="@string/bottom_bt_book"
+        android:layout_marginStart="@dimen/dp_10"
+        android:layout_marginVertical="@dimen/dp_10"
+        android:id="@+id/bottom_bt_3"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"/>
+
+    <Button
+        android:text="@string/bottom_bt_news"
+        android:layout_marginStart="@dimen/dp_10"
+        android:layout_marginVertical="@dimen/dp_10"
+        android:id="@+id/bottom_bt_4"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"/>
+
+    <Button
+        android:text="@string/bottom_bt_browser"
+        android:layout_marginStart="@dimen/dp_10"
+        android:layout_marginVertical="@dimen/dp_10"
+        android:id="@+id/bottom_bt_5"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"/>
+</com.example.viewdemo.fragment.ui.BottomNavigatorLayout>
