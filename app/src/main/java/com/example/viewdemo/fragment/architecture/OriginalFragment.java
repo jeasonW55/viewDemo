@@ -53,7 +53,7 @@ public abstract class OriginalFragment extends Fragment implements ViewControlle
             int height = getResources().getDimensionPixelOffset(R.dimen.dp_70);
             if (bottomNavi != null) {
                 if (isBottomNaviGone()) {
-                    SelfAnimator.verticalExpanded(bottomNavi, false, height);
+                    bottomNavi.setVisibility(View.GONE);
                 } else {
                     bottomNavi.setVisibility(View.VISIBLE);
                 }

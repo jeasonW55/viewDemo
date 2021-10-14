@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="tab_bt_1" type="id" />
+    <item name="tab_bt_2" type="id" />
+    <item name="tab_bt_3" type="id" />
+    <item name="tab_bt_4" type="id" />
+    <item name="tab_bt_5" type="id" />
+    <item name="tab_bt_6" type="id" />
+</resources>

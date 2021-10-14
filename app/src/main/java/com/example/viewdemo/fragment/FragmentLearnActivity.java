@@ -3,10 +3,9 @@ package com.example.viewdemo.fragment;
 import android.annotation.SuppressLint;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
-import android.widget.HorizontalScrollView;
+import android.widget.LinearLayout;
 
 import androidx.fragment.app.Fragment;
-import androidx.viewpager.widget.ViewPager;
 
 import com.example.viewdemo.AbstractActivity;
 import com.example.viewdemo.R;
@@ -23,7 +22,7 @@ import com.example.viewdemo.manager.ActivityRecorder;
  * <pre>
  *   @author wangjishun
  *   time: 2021/10/13
- *   desc:
+ *   desc: 学习fragment的Activity
  * </pre>
  **/
 
@@ -36,7 +35,7 @@ public class FragmentLearnActivity extends AbstractActivity {
 
     @Override
     public void initViews() {
-        HorizontalScrollView scrollView = findViewById(R.id.bottom_navigator);
+        LinearLayout scrollView = findViewById(R.id.bottom_navigator);
         BottomNavigatorLayout v = (BottomNavigatorLayout) LayoutInflater.from(this).inflate(R.layout.navigator_scroll_view, null);
         scrollView.addView(v);
         mAdapter = new TopPageAdapter(getSupportFragmentManager());

@@ -1,17 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <com.example.viewdemo.fragment.ui.BottomNavigatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="horizontal"
-    android:layout_width="wrap_content"
+    android:layout_width="match_parent"
     android:layout_height="match_parent">
 
     <RadioGroup
         android:layout_marginTop="@dimen/dp_8"
         android:id="@+id/bottom_bt_group"
         android:orientation="horizontal"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="match_parent">
 
         <RadioButton
+
             android:id="@+id/bottom_bt_1"
             style="@style/top_image_bottom_text"
             android:layout_marginEnd="@dimen/dp_10"

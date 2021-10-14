@@ -7,4 +7,10 @@
     <string name="bottom_bt_browser">浏览器</string>
     <string name="title_bar_text">标题</string>
     <string name="title_default">标题</string>
+    <string name="tab_bar_baidu">百度</string>
+    <string name="tab_bar_sina">新浪</string>
+    <string name="tab_bar_zhihu">知乎</string>
+    <string name="tab_bar_tx">腾讯</string>
+    <string name="tab_bar_bz">B站</string>
+    <string name="tab_bar_android">安卓官网</string>
 </resources>

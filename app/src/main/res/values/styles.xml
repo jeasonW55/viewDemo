@@ -10,12 +10,13 @@
     </style>
 
     <style name="top_image_bottom_text">
+        <item name="android:layout_weight">1</item>
         <item name="android:paddingTop">@dimen/dp_2</item>
         <item name="android:button">@drawable/bt_selected</item>
         <item name="android:background">@null</item>
         <item name="android:drawableTop">@drawable/bt_setting</item>
-        <item name="android:layout_width">@dimen/dp_80</item>
-        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_width">@dimen/dp_60</item>
+        <item name="android:layout_height">@dimen/dp_70</item>
     </style>
 
 
