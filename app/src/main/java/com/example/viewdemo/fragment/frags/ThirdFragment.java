@@ -10,7 +10,7 @@ import com.example.viewdemo.fragment.architecture.OriginalFragment;
 public class ThirdFragment extends OriginalFragment {
     @Override
     public void setTitleBar(ViewGroup vg) {
-
+        super.setTitleBar(vg);
     }
 
     @Override

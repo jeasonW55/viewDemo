@@ -4,6 +4,7 @@ import android.annotation.SuppressLint;
 import android.view.View;
 import android.view.ViewGroup;
 
+import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -33,8 +34,6 @@ public class MainFragment extends OriginalFragment {
     protected void initView(View view) {
         initRecyclerView(view);
     }
-
-
 
     /**
      * 初始化recyclerView
@@ -66,7 +65,7 @@ public class MainFragment extends OriginalFragment {
 
     @Override
     public void setTitleBar(ViewGroup vg) {
-
+        super.setTitleBar(vg);
     }
 
     @Override
@@ -78,4 +77,5 @@ public class MainFragment extends OriginalFragment {
     public boolean isBottomNaviGone() {
         return false;
     }
+
 }

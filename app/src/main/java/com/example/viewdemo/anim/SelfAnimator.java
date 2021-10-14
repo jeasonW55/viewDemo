@@ -63,4 +63,51 @@ public class SelfAnimator {
         animator.start();
     }
 
+    public static void verticalExpanded(View target,boolean isOpen, int height) {
+        ValueAnimator animator;
+        if (target.getVisibility() == View.VISIBLE && isOpen) {
+            return;
+        }
+        if (target.getVisibility() == View.GONE && !isOpen) {
+            return;
+        }
+        if (!isOpen) {
+            animator = ValueAnimator.ofInt(height, 0);
+        } else{
+            animator = ValueAnimator.ofInt(0, height);
+        }
+        if (animator == null) {
+            return;
+        }
+        animator.setDuration(DURATION);
+        animator.addListener(new AnimatorListenerAdapter() {
+            @Override
+            public void onAnimationCancel(Animator animation) {
+                super.onAnimationCancel(animation);
+            }
+
+            @Override
+            public void onAnimationEnd(Animator animation) {
+                super.onAnimationEnd(animation);
+                if (!isOpen) {
+                    target.setVisibility(View.GONE);
+                }
+            }
+
+            @Override
+            public void onAnimationStart(Animator animation) {
+                super.onAnimationStart(animation);
+                if (isOpen) {
+                    target.setVisibility(View.VISIBLE);
+                }
+            }
+        });
+        animator.addUpdateListener(valueAnimator -> {
+            final ViewGroup.LayoutParams lp = target.getLayoutParams();
+            lp.height = (int) valueAnimator.getAnimatedValue();
+            target.requestLayout();
+        });
+        animator.start();
+    }
+
 }

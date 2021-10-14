@@ -17,7 +17,7 @@ import com.example.viewdemo.fragment.architecture.OriginalFragment;
 public class ForthFragment extends OriginalFragment {
     @Override
     public void setTitleBar(ViewGroup vg) {
-
+        super.setTitleBar(vg);
     }
 
     @Override

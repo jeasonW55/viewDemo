@@ -5,15 +5,20 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.RelativeLayout;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import com.example.viewdemo.R;
+import com.example.viewdemo.anim.SelfAnimator;
 import com.example.viewdemo.fragment.ViewController;
 import com.example.viewdemo.fragment.data.RuntimeData;
+import com.example.viewdemo.fragment.frags.FifthFragment;
 
 /**
  * <pre>
@@ -25,6 +30,8 @@ import com.example.viewdemo.fragment.data.RuntimeData;
 public abstract class OriginalFragment extends Fragment implements ViewController {
 
     public static final String TAG = "wangjishun";
+
+    private Fragment mCurrent;
 
     @Nullable
     @Override
@@ -39,23 +46,27 @@ public abstract class OriginalFragment extends Fragment implements ViewControlle
     @Override
     public void onResume() {
         super.onResume();
+        mCurrent = this;
         Log.d(TAG, toString() + ":\nonResume");
-        View bottomNavi = getActivity().findViewById(R.id.bottom_navigator);
-        if (bottomNavi != null) {
-            if (isBottomNaviGone()) {
-                bottomNavi.setVisibility(View.GONE);
-            } else {
-                bottomNavi.setVisibility(View.VISIBLE);
+        if (getActivity() != null) {
+            View bottomNavi = getActivity().findViewById(R.id.bottom_navigator);
+            int height = getResources().getDimensionPixelOffset(R.dimen.dp_70);
+            if (bottomNavi != null) {
+                if (isBottomNaviGone()) {
+                    SelfAnimator.verticalExpanded(bottomNavi, false, height);
+                } else {
+                    bottomNavi.setVisibility(View.VISIBLE);
+                }
             }
-        }
 
-        RelativeLayout titleBar = getActivity().findViewById(R.id.title_bar);
-        if (titleBar != null) {
-            if (isBottomNaviGone()) {
-                titleBar.setVisibility(View.GONE);
-            } else {
-                titleBar.setVisibility(View.VISIBLE);
-                setTitleBar(titleBar);
+            RelativeLayout titleBar = getActivity().findViewById(R.id.title_bar);
+            if (titleBar != null) {
+                if (isTitleBarGone()) {
+                    SelfAnimator.verticalExpanded(titleBar, false, titleBar.getMeasuredHeight());
+                } else {
+                    titleBar.setVisibility(View.VISIBLE);
+                    setTitleBar(titleBar);
+                }
             }
         }
     }
@@ -74,8 +85,25 @@ public abstract class OriginalFragment extends Fragment implements ViewControlle
 
     protected void initView(View view){
         Log.d(TAG, toString()  + ":\ninitView");
+    }
 
+    @Override
+    public void setTitleBar(ViewGroup vg) {
+        TextView tv = vg.findViewById(R.id.title_bar_text);
+        tv.setText(getStrByResId(R.string.title_default));
 
+        EditText urlEditAreaView = vg.findViewById(R.id.title_edit_area);
+        if (isEditAreaVisible()) {
+            urlEditAreaView.setVisibility(View.VISIBLE);
+        } else {
+            urlEditAreaView.setVisibility(View.GONE);
+        }
+
+        if (isTitleTextVisible()) {
+            tv.setVisibility(View.VISIBLE);
+        } else {
+            tv.setVisibility(View.GONE);
+        }
     }
 
     @Override
@@ -86,5 +114,26 @@ public abstract class OriginalFragment extends Fragment implements ViewControlle
 
     public void parseRuntimeData(RuntimeData data) {
         Log.d(TAG, toString()  + ":\nparseData");
+    }
+
+    /**
+     * 获取资源文件的字符串
+     */
+    protected String getStrByResId(int id) {
+        return getResources().getString(id);
+    }
+
+    public Fragment getCurrent() {
+        return mCurrent;
+    }
+
+    @Override
+    public boolean isEditAreaVisible() {
+        return false;
+    }
+
+    @Override
+    public boolean isTitleTextVisible() {
+        return true;
     }
 }

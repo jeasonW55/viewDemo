@@ -6,4 +6,5 @@
     <string name="bottom_bt_news">新闻</string>
     <string name="bottom_bt_browser">浏览器</string>
     <string name="title_bar_text">标题</string>
+    <string name="title_default">标题</string>
 </resources>

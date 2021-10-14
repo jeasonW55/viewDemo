@@ -13,7 +13,7 @@ public class SecondFragment extends OriginalFragment {
 
     @Override
     public void setTitleBar(ViewGroup vg) {
-
+        super.setTitleBar(vg);
     }
 
     @Override

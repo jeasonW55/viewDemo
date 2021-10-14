@@ -1,20 +1,22 @@
 package com.example.viewdemo.fragment;
 
 import android.annotation.SuppressLint;
+import android.view.KeyEvent;
 import android.view.LayoutInflater;
-import android.view.View;
 import android.widget.HorizontalScrollView;
-import android.widget.RelativeLayout;
 
+import androidx.fragment.app.Fragment;
 import androidx.viewpager.widget.ViewPager;
-import androidx.viewpager2.widget.ViewPager2;
 
 import com.example.viewdemo.AbstractActivity;
 import com.example.viewdemo.R;
 import com.example.viewdemo.annotation.Layout;
 import com.example.viewdemo.fragment.adpter.TopPageAdapter;
+import com.example.viewdemo.fragment.frags.FifthFragment;
 import com.example.viewdemo.fragment.frags.MainFragment;
 import com.example.viewdemo.fragment.ui.BottomNavigatorLayout;
+import com.example.viewdemo.fragment.ui.FragmentViewPager;
+import com.example.viewdemo.fragment.ui.WebBrowser;
 import com.example.viewdemo.manager.ActivityRecorder;
 
 /**
@@ -29,20 +31,48 @@ import com.example.viewdemo.manager.ActivityRecorder;
 @Layout(layout = R.layout.activity_layout_fragment_container)
 public class FragmentLearnActivity extends AbstractActivity {
 
+    TopPageAdapter mAdapter;
+    FragmentViewPager mPage;
+
     @Override
     public void initViews() {
         HorizontalScrollView scrollView = findViewById(R.id.bottom_navigator);
         BottomNavigatorLayout v = (BottomNavigatorLayout) LayoutInflater.from(this).inflate(R.layout.navigator_scroll_view, null);
         scrollView.addView(v);
-        TopPageAdapter adapter = new TopPageAdapter(getSupportFragmentManager());
-        ViewPager page = findViewById(R.id.fragment_container);
-        page.setAdapter(adapter);
-        v.setPager(page);
+        mAdapter = new TopPageAdapter(getSupportFragmentManager());
+        mPage = findViewById(R.id.fragment_container);
+        mPage.setAdapter(mAdapter);
+        v.setPager(mPage);
     }
 
     @Override
     protected void onDestroy() {
         super.onDestroy();
         ActivityRecorder.SingleTon.getInstance().releaseAll();
+    }
+
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        return super.onKeyDown(keyCode, event);
+    }
+
+    @Override
+    public void onBackPressed() {
+        int position = mPage.getCurrentItem();
+        int last = mPage.getLastPage();
+        Fragment item = mAdapter.getItem(position);
+        if (item instanceof MainFragment) {
+            super.onBackPressed();
+        } else if (item instanceof FifthFragment) {
+            WebBrowser browser = ((FifthFragment) item).getBrowser();
+            if (browser.canGoBack()) {
+                browser.goBack();
+            } else {
+                mPage.setCurrentItem(last, false);
+            }
+        } else {
+            mPage.setCurrentItem(last, false);
+        }
+
     }
 }

@@ -1,7 +1,6 @@
 package com.example.viewdemo.fragment.ui;
 
 import android.content.Context;
-import android.graphics.Color;
 import android.util.AttributeSet;
 import android.view.View;
 import android.widget.LinearLayout;
@@ -20,7 +19,8 @@ public class BottomNavigatorLayout extends LinearLayout implements View.OnClickL
     RadioButton secondButton;
     RadioButton thirdButton;
     RadioButton forthButton;
-    ViewPager pager;
+    RadioButton fifthButton;
+    FragmentViewPager pager;
 
     public BottomNavigatorLayout(Context context) {
         super(context);
@@ -46,6 +46,7 @@ public class BottomNavigatorLayout extends LinearLayout implements View.OnClickL
         secondButton = findViewById(R.id.bottom_bt_2);
         thirdButton = findViewById(R.id.bottom_bt_3);
         forthButton = findViewById(R.id.bottom_bt_4);
+        fifthButton = findViewById(R.id.bottom_bt_5);
         btGroup.setOnCheckedChangeListener(this);
     }
 
@@ -73,6 +74,10 @@ public class BottomNavigatorLayout extends LinearLayout implements View.OnClickL
                 forthButton.setChecked(true);
                 switchFragment(Constants.PAGE_FORTH);
                 break;
+            case R.id.bottom_bt_5:
+                fifthButton.setChecked(true);
+                switchFragment(Constants.PAGE_FIFTH);
+                break;
             default:
                 break;
         }
@@ -80,11 +85,12 @@ public class BottomNavigatorLayout extends LinearLayout implements View.OnClickL
 
     private void switchFragment(int pageOrder) {
         if (pager != null) {
-            pager.setCurrentItem(pageOrder);
+            pager.setLastPage(pager.getCurrentItem());
+            pager.setCurrentItem(pageOrder, false);
         }
     }
 
-    public void setPager(ViewPager pager) {
+    public void setPager(FragmentViewPager pager) {
         this.pager = pager;
     }
 

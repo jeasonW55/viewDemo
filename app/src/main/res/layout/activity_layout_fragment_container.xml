@@ -24,9 +24,27 @@
             android:textColor="@color/white"
             android:textSize="@dimen/font_sp_17" />
 
+        <EditText
+            android:visibility="gone"
+            android:id="@+id/title_edit_area"
+            android:layout_marginVertical="@dimen/dp_5"
+            android:layout_marginStart="@dimen/dp_10"
+            android:layout_marginEnd="@dimen/dp_10"
+            android:layout_width="@dimen/dp_350"
+            android:layout_height="match_parent"/>
+
+        <ImageView
+            android:layout_alignParentEnd="true"
+            android:background="@drawable/bt_setting"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/dp_5"
+            android:id="@+id/title_right_bt"
+            android:layout_width="@dimen/dp_20"
+            android:layout_height="@dimen/dp_20"/>
+
     </com.example.viewdemo.fragment.ui.TitleBarLayout>
 
-    <androidx.viewpager.widget.ViewPager
+    <com.example.viewdemo.fragment.ui.FragmentViewPager
         android:id="@+id/fragment_container"
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -34,7 +52,7 @@
         app:layout_constraintBottom_toTopOf="@id/bottom_navigator"
         app:layout_constraintTop_toBottomOf="@id/title_bar">
 
-    </androidx.viewpager.widget.ViewPager>
+    </com.example.viewdemo.fragment.ui.FragmentViewPager>
 
     <HorizontalScrollView
         android:scrollbars="none"

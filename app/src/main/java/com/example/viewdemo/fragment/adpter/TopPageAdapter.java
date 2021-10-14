@@ -6,6 +6,7 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
 
 import com.example.viewdemo.fragment.architecture.OriginalFragment;
+import com.example.viewdemo.fragment.frags.FifthFragment;
 import com.example.viewdemo.fragment.frags.ForthFragment;
 import com.example.viewdemo.fragment.frags.MainFragment;
 import com.example.viewdemo.fragment.frags.SecondFragment;
@@ -31,6 +32,8 @@ public class TopPageAdapter extends FragmentPagerAdapter {
 
     private final ForthFragment mForthFragment;
 
+    private final FifthFragment mFifthFragment;
+
     private final List<OriginalFragment> mFragmentList;
 
     public TopPageAdapter(@NonNull FragmentManager fm) {
@@ -43,6 +46,7 @@ public class TopPageAdapter extends FragmentPagerAdapter {
         mSecondFragment = new SecondFragment();
         mThirdFragment = new ThirdFragment();
         mForthFragment = new ForthFragment();
+        mFifthFragment = new FifthFragment();
         mFragmentList = new ArrayList<>();
         initFragList();
     }
@@ -52,6 +56,7 @@ public class TopPageAdapter extends FragmentPagerAdapter {
         mFragmentList.add(mSecondFragment);
         mFragmentList.add(mThirdFragment);
         mFragmentList.add(mForthFragment);
+        mFragmentList.add(mFifthFragment);
     }
 
     @NonNull
@@ -64,4 +69,5 @@ public class TopPageAdapter extends FragmentPagerAdapter {
     public int getCount() {
         return mFragmentList == null ? 0 : mFragmentList.size();
     }
+
 }
