@@ -4,43 +4,51 @@
     android:layout_width="wrap_content"
     android:layout_height="match_parent">
 
-    <Button
-        android:text="@string/bottom_bt_movie"
-        android:layout_marginStart="@dimen/dp_10"
-        android:layout_marginVertical="@dimen/dp_10"
-        android:id="@+id/bottom_bt_1"
+    <RadioGroup
+        android:layout_marginTop="@dimen/dp_8"
+        android:id="@+id/bottom_bt_group"
+        android:orientation="horizontal"
         android:layout_width="wrap_content"
-        android:layout_height="match_parent"/>
+        android:layout_height="match_parent">
 
-    <Button
-        android:text="@string/bottom_bt_cartoon"
-        android:layout_marginStart="@dimen/dp_10"
-        android:layout_marginVertical="@dimen/dp_10"
-        android:id="@+id/bottom_bt_2"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"/>
+        <RadioButton
+            android:id="@+id/bottom_bt_1"
+            style="@style/top_image_bottom_text"
+            android:layout_marginEnd="@dimen/dp_10"
+            android:text="@string/bottom_bt_movie"
+            android:textAlignment="center"
+            />
 
-    <Button
-        android:text="@string/bottom_bt_book"
-        android:layout_marginStart="@dimen/dp_10"
-        android:layout_marginVertical="@dimen/dp_10"
-        android:id="@+id/bottom_bt_3"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"/>
+        <RadioButton
+            android:id="@+id/bottom_bt_2"
+            style="@style/top_image_bottom_text"
+            android:text="@string/bottom_bt_cartoon"
+            android:layout_marginEnd="@dimen/dp_10"
+            android:textAlignment="center"
+            />
 
-    <Button
-        android:text="@string/bottom_bt_news"
-        android:layout_marginStart="@dimen/dp_10"
-        android:layout_marginVertical="@dimen/dp_10"
-        android:id="@+id/bottom_bt_4"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"/>
+        <RadioButton
+            android:id="@+id/bottom_bt_3"
+            style="@style/top_image_bottom_text"
+            android:text="@string/bottom_bt_book"
+            android:layout_marginEnd="@dimen/dp_10"
+            android:textAlignment="center"
+            />
 
-    <Button
-        android:text="@string/bottom_bt_browser"
-        android:layout_marginStart="@dimen/dp_10"
-        android:layout_marginVertical="@dimen/dp_10"
-        android:id="@+id/bottom_bt_5"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"/>
+        <RadioButton
+            android:id="@+id/bottom_bt_4"
+            style="@style/top_image_bottom_text"
+            android:layout_marginEnd="@dimen/dp_10"
+            android:text="@string/bottom_bt_news"
+            android:textAlignment="center"
+            />
+
+        <RadioButton
+            android:id="@+id/bottom_bt_5"
+            style="@style/top_image_bottom_text"
+            android:text="@string/bottom_bt_browser"
+            android:textAlignment="center"
+            />
+
+    </RadioGroup>
 </com.example.viewdemo.fragment.ui.BottomNavigatorLayout>

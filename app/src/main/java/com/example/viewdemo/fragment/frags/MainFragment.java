@@ -1,37 +1,31 @@
 package com.example.viewdemo.fragment.frags;
 
 import android.annotation.SuppressLint;
-import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.HorizontalScrollView;
 
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.viewdemo.AbstractActivity;
 import com.example.viewdemo.R;
 import com.example.viewdemo.annotation.FragmentName;
 import com.example.viewdemo.annotation.Layout;
-import com.example.viewdemo.fragment.ViewController;
 import com.example.viewdemo.fragment.adpter.DataShowAdapter;
 import com.example.viewdemo.fragment.architecture.OriginalFragment;
-import com.example.viewdemo.fragment.data.RuntimeData;
 import com.example.viewdemo.fragment.data.ShowData;
-import com.example.viewdemo.manager.ActivityRecorder;
 
 import java.util.ArrayList;
 import java.util.List;
 
 /**
  * <pre>
- *   author: wangjishun
+ *   @author wangjishun
  *   time: 2021/10/13
  *   desc: 主界面的fragment
  * </pre>
  **/
 @SuppressLint("NonConstantResourceId")
-@Layout(layout = R.layout.layout_fragment_main)
+@Layout(layout = R.layout.fragment_main_layout)
 @FragmentName(name = "mainFragment")
 public class MainFragment extends OriginalFragment {
 
@@ -57,7 +51,8 @@ public class MainFragment extends OriginalFragment {
 
     private void dealAdapter(DataShowAdapter adapter) {
         adapter.setListener(position -> {
-            ActivityRecorder.SingleTon.getInstance().startFragment(R.id.fragment_container, new MainNextFragment(), true, new RuntimeData());
+//            ActivityRecorder.SingleTon.getInstance()
+//            .startFragment(R.id.fragment_container, new MainNextFragment(), true, new RuntimeData());
         });
     }
 
