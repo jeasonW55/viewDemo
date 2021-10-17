@@ -11,6 +11,7 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.example.viewdemo.adapter.DialogAdapter;
+import com.example.viewdemo.annotation.Advertisement;
 import com.example.viewdemo.annotation.Layout;
 import com.google.android.material.bottomsheet.BottomSheetDialog;
 
@@ -22,6 +23,7 @@ import java.util.List;
  */
 @SuppressLint("NonConstantResourceId")
 @Layout(layout = R.layout.activity_main)
+@Advertisement
 public class MainActivity extends AbstractActivity {
 
     public static final String NAME = "type";
@@ -105,5 +107,10 @@ public class MainActivity extends AbstractActivity {
                 startActivity(new Intent(MainActivity.this, LayoutActivity.class));
             }
         });
+    }
+
+    @Override
+    protected boolean needShowAds() {
+        return true;
     }
 }

@@ -4,6 +4,7 @@ import android.annotation.SuppressLint;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
+import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -26,6 +27,8 @@ import com.example.viewdemo.fragment.util.CustomUrl;
 public class FifthFragment extends OriginalFragment implements View.OnClickListener, TabBarLayout.TabItemClickListener {
 
     private WebBrowser mBrowser;
+
+    private FrameLayout mLayout;
 
     @Override
     public void setTitleBar(ViewGroup vg) {
@@ -60,12 +63,15 @@ public class FifthFragment extends OriginalFragment implements View.OnClickListe
     protected void initView(View view) {
         super.initView(view);
         mBrowser = view.findViewById(R.id.web_browser);
+        mLayout = view.findViewById(R.id.show_video_player_view);
         TabBarLayout mTabBarLayout = view.findViewById(R.id.tab_bar_container);
         mTabBarLayout.setItemClickListener(this);
 
         EditText urlText = view.findViewById(R.id.url_show_tv);
         mBrowser.setUrlShowView(urlText);
         mBrowser.loadUrl(CustomUrl.BAIDU);
+        mBrowser.setShowVideoView(mLayout);
+        mBrowser.initWebBrowserChromeClient();
         urlText.setText(getCurrentUrl());
     }
 

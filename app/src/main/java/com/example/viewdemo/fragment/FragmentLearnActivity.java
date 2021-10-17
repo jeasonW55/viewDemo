@@ -1,10 +1,13 @@
 package com.example.viewdemo.fragment;
 
 import android.annotation.SuppressLint;
+import android.content.res.Configuration;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
+import android.view.WindowManager;
 import android.widget.LinearLayout;
 
+import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
 import com.example.viewdemo.AbstractActivity;
@@ -72,6 +75,20 @@ public class FragmentLearnActivity extends AbstractActivity {
         } else {
             mPage.setCurrentItem(last, false);
         }
+    }
 
+    @Override
+    public void onConfigurationChanged(@NonNull Configuration newConfig) {
+        super.onConfigurationChanged(newConfig);
+        switch (newConfig.orientation) {
+            case Configuration.ORIENTATION_LANDSCAPE:
+                getWindow().clearFlags(WindowManager.LayoutParams.FLAG_FORCE_NOT_FULLSCREEN);
+                getWindow().addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
+                break;
+            case Configuration.ORIENTATION_PORTRAIT:
+                getWindow().clearFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
+                getWindow().addFlags(WindowManager.LayoutParams.FLAG_FORCE_NOT_FULLSCREEN);
+                break;
+        }
     }
 }

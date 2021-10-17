@@ -13,4 +13,5 @@
     <string name="tab_bar_tx">腾讯</string>
     <string name="tab_bar_bz">B站</string>
     <string name="tab_bar_android">安卓官网</string>
+    <string name="left_seconds">关闭|3s</string>
 </resources>

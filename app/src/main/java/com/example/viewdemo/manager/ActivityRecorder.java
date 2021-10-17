@@ -1,6 +1,7 @@
 package com.example.viewdemo.manager;
 
 import android.app.Activity;
+import android.os.Handler;
 import android.text.TextUtils;
 
 import androidx.fragment.app.Fragment;
@@ -8,7 +9,7 @@ import androidx.fragment.app.FragmentActivity;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
-import com.example.viewdemo.annotation.FragmentName;
+import com.example.viewdemo.annotation.Advertisement;
 import com.example.viewdemo.annotation.Layout;
 import com.example.viewdemo.fragment.architecture.FragmentRecorder;
 import com.example.viewdemo.fragment.architecture.OriginalFragment;
@@ -53,7 +54,15 @@ public final class ActivityRecorder {
             Layout layout = activity.getClass().getAnnotation(Layout.class);
             assert layout != null;
             int layoutId = layout.layout();
-            activity.setContentView(layoutId);
+            if (activity.getClass().isAnnotationPresent(Advertisement.class)) {
+                Advertisement advertisement = activity.getClass().getAnnotation(Advertisement.class);
+                if (advertisement != null) {
+                    int adsLayout = advertisement.adsLayout();
+                    activity.setContentView(adsLayout);
+                }
+            } else {
+                activity.setContentView(layoutId);
+            }
         }
         M_ACTIVITIES.add(activity);
     }

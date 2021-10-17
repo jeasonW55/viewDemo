@@ -3,18 +3,24 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/AndroidProjects/viewDemo/app/src/main/res/drawable/common_corner_rect_bg_white.xml" value="0.4197916666666667" />
+        <entry key="..\:/AndroidProjects/viewDemo/app/src/main/res/layout/activity_h5_layout.xml" value="0.4036458333333333" />
         <entry key="..\:/AndroidProjects/viewDemo/app/src/main/res/layout/activity_layout_fragment_activity.xml" value="0.128125" />
         <entry key="..\:/AndroidProjects/viewDemo/app/src/main/res/layout/activity_layout_fragment_container.xml" value="0.4036458333333333" />
+        <entry key="..\:/AndroidProjects/viewDemo/app/src/main/res/layout/activity_show.xml" value="0.4036458333333333" />
         <entry key="..\:/AndroidProjects/viewDemo/app/src/main/res/layout/fragment_detail_show.xml" value="0.4036458333333333" />
+        <entry key="..\:/AndroidProjects/viewDemo/app/src/main/res/layout/fragment_fifth_layout.xml" value="0.23177083333333334" />
         <entry key="..\:/AndroidProjects/viewDemo/app/src/main/res/layout/fragment_main_next.xml" value="0.4036458333333333" />
         <entry key="..\:/AndroidProjects/viewDemo/app/src/main/res/layout/fragment_second_next.xml" value="0.4036458333333333" />
         <entry key="..\:/AndroidProjects/viewDemo/app/src/main/res/layout/fragment_third_layout.xml" value="0.4036458333333333" />
         <entry key="..\:/AndroidProjects/viewDemo/app/src/main/res/layout/layout_fragment_main.xml" value="0.33469202898550726" />
+        <entry key="..\:/AndroidProjects/viewDemo/app/src/main/res/layout/layout_otherview.xml" value="0.4036458333333333" />
+        <entry key="..\:/AndroidProjects/viewDemo/app/src/main/res/layout/layout_show_advertisement.xml" value="0.4008152173913043" />
         <entry key="..\:/AndroidProjects/viewDemo/app/src/main/res/layout/navigator_scroll_view.xml" value="0.4036458333333333" />
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_7" default="false" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_7" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">

@@ -36,9 +36,17 @@ public class LayoutActivity extends AbstractActivity implements View.OnClickList
             case R.id.tv_1:
                 gotoFragmentActivity();
                 break;
+            case R.id.tv_2:
+                goToTestH5Activity();
+                break;
             default:
                 break;
         }
+    }
+
+    private void goToTestH5Activity() {
+        Intent intent = new Intent(this, H5FullScreenActivity.class);
+        startActivity(intent);
     }
 
     private void gotoFragmentActivity() {

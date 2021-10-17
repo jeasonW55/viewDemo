@@ -19,17 +19,17 @@
         android:text="fragment 学习" />
 
     <TextView
-        android:layout_marginTop="@dimen/dp_20"
-        android:layout_centerHorizontal="true"
-        android:background="@drawable/rect_bt_bg"
-        android:layout_below="@id/tv_1"
         android:id="@+id/tv_2"
-        android:gravity="center"
-        android:textColor="@color/green"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
-        android:textSize="15sp"
-        android:text=""/>
+        android:layout_below="@id/tv_1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/dp_20"
+        android:background="@drawable/rect_bt_bg"
+        android:gravity="center"
+        android:text="网页全屏播放实验"
+        android:textColor="@color/green"
+        android:textSize="15sp" />
 
     <TextView
         android:layout_marginTop="@dimen/dp_20"

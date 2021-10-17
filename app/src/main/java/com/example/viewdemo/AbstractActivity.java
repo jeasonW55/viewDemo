@@ -1,17 +1,22 @@
 package com.example.viewdemo;
 
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Looper;
+import android.os.Message;
+import android.widget.ImageView;
+import android.widget.TextView;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
-import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentTransaction;
 
-import com.example.viewdemo.fragment.architecture.FragmentRecorder;
-import com.example.viewdemo.fragment.architecture.OriginalFragment;
-import com.example.viewdemo.fragment.data.RuntimeData;
+import com.example.viewdemo.annotation.Advertisement;
+import com.example.viewdemo.annotation.Layout;
+import com.example.viewdemo.data.AdsData;
 import com.example.viewdemo.manager.ActivityRecorder;
+import com.example.viewdemo.manager.TaskManager;
+import com.example.viewdemo.ui.AdvertisementLayout;
 
 
 /**
@@ -23,17 +28,33 @@ import com.example.viewdemo.manager.ActivityRecorder;
  **/
 public abstract class AbstractActivity extends FragmentActivity {
 
+    private final ActivityRecorder mRecorders = ActivityRecorder.SingleTon.getInstance();
+
+    private final TaskManager mTaskManager = TaskManager.SingleTon.getInstance();
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        ActivityRecorder.SingleTon.getInstance().registerActivity(this);
-        initViews();
+        mRecorders.registerActivity(this);
+        if (needShowAds()) {
+            mTaskManager.setHandler(new Handler(getMainLooper()) {
+                @Override
+                public void handleMessage(@NonNull Message msg) {
+                    if (msg.what == AdvertisementLayout.END_ADS) {
+                        initViews();
+                    }
+                }
+            });
+        } else {
+            initViews();
+        }
     }
 
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        ActivityRecorder.SingleTon.getInstance().unRegisterActivity(this);
+        mRecorders.unRegisterActivity(this);
+        mTaskManager.removeAllCallbacks();
     }
 
     /**
@@ -42,5 +63,14 @@ public abstract class AbstractActivity extends FragmentActivity {
     public void initViews() {
         //do nothing
     }
+
+    /**
+     * 是否显示间隔动画
+     * @return 间隔动画是否会显示
+     */
+    protected boolean needShowAds() {
+        return false;
+    }
+
 
 }
