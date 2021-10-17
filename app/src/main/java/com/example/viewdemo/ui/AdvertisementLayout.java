@@ -37,13 +37,13 @@ public class AdvertisementLayout extends FrameLayout {
 
     private Runnable mAdsRunnable = new Runnable() {
 
-        String leftTime = "关闭|%sS";
+        String leftTime = "关闭 | %sS";
 
         @Override
         public void run() {
             if (mDuration >= 0) {
                 showAds(mDuration);
-                leftTime = "关闭|" + mDuration + "s";
+                leftTime = "关闭 | " + mDuration + "s";
                 Log.d("wangjishun", leftTime);
                 mTvShowAdsTimer.setText(leftTime);
                 --mDuration;

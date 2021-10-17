@@ -3,12 +3,14 @@ package com.example.viewdemo.manager;
 import android.app.Activity;
 import android.os.Handler;
 import android.text.TextUtils;
+import android.view.View;
 
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
+import com.example.viewdemo.R;
 import com.example.viewdemo.annotation.Advertisement;
 import com.example.viewdemo.annotation.Layout;
 import com.example.viewdemo.fragment.architecture.FragmentRecorder;
@@ -51,9 +53,7 @@ public final class ActivityRecorder {
      */
     public void registerActivity(Activity activity) {
         if (activity.getClass().isAnnotationPresent(Layout.class)) {
-            Layout layout = activity.getClass().getAnnotation(Layout.class);
-            assert layout != null;
-            int layoutId = layout.layout();
+            int layoutId = getLayoutId(activity);
             if (activity.getClass().isAnnotationPresent(Advertisement.class)) {
                 Advertisement advertisement = activity.getClass().getAnnotation(Advertisement.class);
                 if (advertisement != null) {
@@ -86,47 +86,18 @@ public final class ActivityRecorder {
         return (FragmentActivity) M_ACTIVITIES.get(M_ACTIVITIES.size() - 1);
     }
 
-    /**
-     * 启动fragment
-     */
-    public void startFragment(int containerId, Fragment fragment, boolean addToBackStack, RuntimeData data) {
-        Fragment currentFragment = FragmentRecorder.SingleTon.getInstance().getCurrentFragment();
-        if (currentFragment != null && TextUtils.equals(fragment.getClass().getName(), currentFragment.getClass().getName())) {
-            return;
-        }
-        FragmentActivity currentActivity = getCurrentActivity();
-        if (currentActivity != null) {
-            FragmentManager manager = currentActivity.getSupportFragmentManager();
-            FragmentTransaction transaction = manager.beginTransaction();
-            manager.addOnBackStackChangedListener(() -> {
-                Fragment current = manager.findFragmentById(containerId);
-                if (current != null) {
-                    current.onResume();
-                }
-            });
-            if (currentFragment != null) {
-                transaction.hide(currentFragment);
-            }
-            FragmentRecorder recorder = FragmentRecorder.SingleTon.getInstance();
-            if (recorder.isRecord(fragment)) {
-                transaction.show(recorder.getFragment(fragment));
-            } else {
-                transaction.add(containerId, fragment);
-                if (addToBackStack) {
-                    transaction.addToBackStack(fragment.getClass().toString());
-                }
-            }
-            if (data != null && fragment instanceof OriginalFragment) {
-                OriginalFragment original = (OriginalFragment) fragment;
-                original.parseRuntimeData(data);
-            }
-
-            transaction.commit();
-        }
-    }
-
     public void releaseAll() {
         M_ACTIVITIES.clear();
+    }
+
+    public static int getLayoutId(Activity activity) {
+        int layoutId = 0;
+        if (activity.getClass().isAnnotationPresent(Layout.class)) {
+            Layout layout = activity.getClass().getAnnotation(Layout.class);
+            assert layout != null;
+            layoutId = layout.layout();
+        }
+        return layoutId;
     }
 
 }

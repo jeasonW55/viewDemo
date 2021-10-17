@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/AndroidProjects/viewDemo/app/src/main/res/drawable/common_corner_rect_bg_green.xml" value="0.4197916666666667" />
         <entry key="..\:/AndroidProjects/viewDemo/app/src/main/res/drawable/common_corner_rect_bg_white.xml" value="0.4197916666666667" />
         <entry key="..\:/AndroidProjects/viewDemo/app/src/main/res/layout/activity_h5_layout.xml" value="0.4036458333333333" />
         <entry key="..\:/AndroidProjects/viewDemo/app/src/main/res/layout/activity_layout_fragment_activity.xml" value="0.128125" />

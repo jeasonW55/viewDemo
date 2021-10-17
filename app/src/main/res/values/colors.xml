@@ -13,4 +13,5 @@
     <color name="transparent">#00ffffff</color>
     <color name="theme_bg_green">#00D4A3</color>
     <color name="theme_bg_green_false">#6000D4A3</color>
+    <color name="grey">#575656</color>
 </resources>
