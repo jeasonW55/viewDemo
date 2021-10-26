@@ -114,6 +114,6 @@ public class MainActivity extends AbstractActivity {
 
     @Override
     protected boolean needShowAds() {
-        return true;
+        return false;
     }
 }

@@ -46,17 +46,18 @@
         android:text="网页JS"/>
 
     <TextView
-        android:layout_marginTop="@dimen/dp_20"
-        android:layout_centerHorizontal="true"
-        android:background="@drawable/rect_bt_bg"
-        android:layout_below="@id/gotoWeb"
+        android:visibility="gone"
         android:id="@+id/notNameIntent"
-        android:gravity="center"
-        android:textColor="@color/green"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
-        android:textSize="15sp"
-        android:text="测试匿名Intent"/>
+        android:layout_below="@id/gotoWeb"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/dp_20"
+        android:background="@drawable/rect_bt_bg"
+        android:gravity="center"
+        android:text="测试匿名Intent"
+        android:textColor="@color/green"
+        android:textSize="15sp" />
 
     <TextView
         android:layout_marginTop="@dimen/dp_20"
@@ -72,17 +73,17 @@
         android:text="版本信息"/>
 
     <TextView
-        android:layout_marginTop="@dimen/dp_20"
-        android:layout_centerHorizontal="true"
-        android:background="@drawable/rect_bt_bg"
-        android:layout_below="@id/versionName"
         android:id="@+id/bottom_dialog"
-        android:gravity="center"
-        android:textColor="@color/green"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
-        android:textSize="15sp"
-        android:text="底部弹窗"/>
+        android:layout_below="@id/versionName"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/dp_20"
+        android:background="@drawable/rect_bt_bg"
+        android:gravity="center"
+        android:text="底部弹窗"
+        android:textColor="@color/green"
+        android:textSize="15sp" />
 
     <TextView
         android:id="@+id/otherlayout"
