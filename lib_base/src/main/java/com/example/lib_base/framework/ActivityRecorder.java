@@ -41,10 +41,10 @@ public final class ActivityRecorder {
      *
      * @param activity 传入的activity
      */
-    public void registerActivity(Activity activity) {
+    public void registerActivity(AbstractActivity activity) {
         if (activity.getClass().isAnnotationPresent(Layout.class)) {
             int layoutId = getLayoutId(activity);
-            if (activity.getClass().isAnnotationPresent(Advertisement.class)) {
+            if (activity.getClass().isAnnotationPresent(Advertisement.class) && activity.needShowAds()) {
                 Advertisement advertisement = activity.getClass().getAnnotation(Advertisement.class);
                 if (advertisement != null) {
                     int adsLayout = advertisement.adsLayout();
