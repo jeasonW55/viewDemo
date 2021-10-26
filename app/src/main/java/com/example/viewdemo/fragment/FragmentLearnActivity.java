@@ -12,7 +12,7 @@ import androidx.fragment.app.Fragment;
 
 import com.example.viewdemo.activities.AbstractActivity;
 import com.example.viewdemo.R;
-import com.example.viewdemo.annotation.Layout;
+import com.example.lib_base.annotation.Layout;
 import com.example.viewdemo.fragment.adpter.TopPageAdapter;
 import com.example.viewdemo.fragment.frags.FifthFragment;
 import com.example.viewdemo.fragment.frags.MainFragment;

@@ -4,13 +4,12 @@ import android.annotation.SuppressLint;
 import android.view.View;
 import android.view.ViewGroup;
 
-import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.viewdemo.R;
-import com.example.viewdemo.annotation.FragmentName;
-import com.example.viewdemo.annotation.Layout;
+import com.example.lib_base.annotation.FragmentName;
+import com.example.lib_base.annotation.Layout;
 import com.example.viewdemo.fragment.adpter.DataShowAdapter;
 import com.example.viewdemo.fragment.architecture.OriginalFragment;
 import com.example.viewdemo.fragment.data.ShowData;

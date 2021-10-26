@@ -9,7 +9,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.viewdemo.R;
-import com.example.viewdemo.annotation.Layout;
+import com.example.lib_base.annotation.Layout;
 import com.example.viewdemo.fragment.architecture.OriginalFragment;
 import com.example.viewdemo.fragment.ui.TabBarLayout;
 import com.example.viewdemo.fragment.ui.WebBrowser;

@@ -24,7 +24,7 @@ import com.example.viewdemo.R;
 import com.example.viewdemo.Url;
 import com.example.viewdemo.adapter.ExpandedBean;
 import com.example.viewdemo.adapter.ExpandedListAdapter;
-import com.example.viewdemo.annotation.Layout;
+import com.example.lib_base.annotation.Layout;
 import com.example.viewdemo.js.JSInterface;
 
 import java.util.ArrayList;

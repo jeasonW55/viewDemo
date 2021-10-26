@@ -2,19 +2,12 @@ package com.example.viewdemo.activities;
 
 import android.os.Bundle;
 import android.os.Handler;
-import android.os.Looper;
 import android.os.Message;
-import android.view.View;
-import android.widget.ImageView;
-import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.FragmentActivity;
 
-import com.example.viewdemo.annotation.Advertisement;
-import com.example.viewdemo.annotation.Layout;
-import com.example.viewdemo.data.AdsData;
 import com.example.viewdemo.manager.ActivityRecorder;
 import com.example.viewdemo.manager.TaskManager;
 import com.example.viewdemo.ui.AdvertisementLayout;

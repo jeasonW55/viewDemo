@@ -5,8 +5,8 @@ import android.view.ViewGroup;
 
 import androidx.fragment.app.Fragment;
 
-import com.example.viewdemo.annotation.FragmentName;
-import com.example.viewdemo.annotation.Layout;
+import com.example.lib_base.annotation.FragmentName;
+import com.example.lib_base.annotation.Layout;
 
 import java.util.ArrayList;
 import java.util.HashMap;

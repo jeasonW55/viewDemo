@@ -3,7 +3,7 @@ package com.example.viewdemo.fragment.frags;
 import android.view.ViewGroup;
 
 import com.example.viewdemo.R;
-import com.example.viewdemo.annotation.Layout;
+import com.example.lib_base.annotation.Layout;
 import com.example.viewdemo.fragment.architecture.OriginalFragment;
 
 /**

@@ -13,8 +13,8 @@ import android.widget.TextView;
 import com.example.viewdemo.R;
 import com.example.viewdemo.Url;
 import com.example.viewdemo.adapter.DialogAdapter;
+import com.example.lib_base.annotation.Layout;
 import com.example.viewdemo.annotation.Advertisement;
-import com.example.viewdemo.annotation.Layout;
 import com.google.android.material.bottomsheet.BottomSheetDialog;
 
 import java.util.ArrayList;

@@ -1,21 +1,11 @@
 package com.example.viewdemo.manager;
 
 import android.app.Activity;
-import android.os.Handler;
-import android.text.TextUtils;
-import android.view.View;
 
-import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
-import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentTransaction;
 
-import com.example.viewdemo.R;
+import com.example.lib_base.annotation.Layout;
 import com.example.viewdemo.annotation.Advertisement;
-import com.example.viewdemo.annotation.Layout;
-import com.example.viewdemo.fragment.architecture.FragmentRecorder;
-import com.example.viewdemo.fragment.architecture.OriginalFragment;
-import com.example.viewdemo.fragment.data.RuntimeData;
 
 import java.util.ArrayList;
 import java.util.List;
