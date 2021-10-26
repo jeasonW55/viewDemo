@@ -10,7 +10,7 @@ import android.widget.LinearLayout;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
-import com.example.viewdemo.AbstractActivity;
+import com.example.viewdemo.activities.AbstractActivity;
 import com.example.viewdemo.R;
 import com.example.viewdemo.annotation.Layout;
 import com.example.viewdemo.fragment.adpter.TopPageAdapter;

@@ -1,4 +1,4 @@
-package com.example.viewdemo;
+package com.example.viewdemo.activities;
 
 import android.content.Intent;
 import android.graphics.Color;
@@ -20,6 +20,8 @@ import androidx.annotation.Nullable;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.viewdemo.R;
+import com.example.viewdemo.Url;
 import com.example.viewdemo.adapter.ExpandedBean;
 import com.example.viewdemo.adapter.ExpandedListAdapter;
 import com.example.viewdemo.annotation.Layout;

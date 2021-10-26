@@ -1,4 +1,4 @@
-package com.example.viewdemo;
+package com.example.viewdemo.activities;
 
 import android.os.Bundle;
 import android.os.Handler;

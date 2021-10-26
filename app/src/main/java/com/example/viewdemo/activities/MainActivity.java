@@ -1,4 +1,4 @@
-package com.example.viewdemo;
+package com.example.viewdemo.activities;
 
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -10,6 +10,8 @@ import android.net.Uri;
 import android.view.View;
 import android.widget.TextView;
 
+import com.example.viewdemo.R;
+import com.example.viewdemo.Url;
 import com.example.viewdemo.adapter.DialogAdapter;
 import com.example.viewdemo.annotation.Advertisement;
 import com.example.viewdemo.annotation.Layout;

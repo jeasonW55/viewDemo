@@ -1,4 +1,4 @@
-package com.example.viewdemo;
+package com.example.viewdemo.activities;
 
 import android.content.res.Configuration;
 import android.view.WindowManager;
@@ -6,6 +6,7 @@ import android.widget.FrameLayout;
 
 import androidx.annotation.NonNull;
 
+import com.example.viewdemo.R;
 import com.example.viewdemo.annotation.Layout;
 import com.example.viewdemo.fragment.ui.WebBrowser;
 import com.example.viewdemo.fragment.util.CustomUrl;

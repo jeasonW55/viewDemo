@@ -17,21 +17,21 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ViewDemo">
-        <activity android:name=".MainActivity">
+        <activity android:name=".activities.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ShowViewActivity" />
-        <activity android:name=".LayoutActivity" />
+        <activity android:name=".activities.ShowViewActivity" />
+        <activity android:name=".activities.LayoutActivity" />
         <activity android:name=".fragment.FragmentLearnActivity"
             android:hardwareAccelerated="true"
             android:screenOrientation="portrait"
             android:configChanges="orientation|screenSize|keyboardHidden|navigation">
         </activity>
-        <activity android:name=".H5FullScreenActivity"
+        <activity android:name=".activities.H5FullScreenActivity"
             android:hardwareAccelerated="true"
             android:configChanges="orientation|screenSize|keyboardHidden">
 
