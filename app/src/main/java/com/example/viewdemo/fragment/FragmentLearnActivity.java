@@ -10,7 +10,7 @@ import android.widget.LinearLayout;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
-import com.example.viewdemo.activities.AbstractActivity;
+import com.example.lib_base.framework.AbstractActivity;
 import com.example.viewdemo.R;
 import com.example.lib_base.annotation.Layout;
 import com.example.viewdemo.fragment.adpter.TopPageAdapter;
@@ -19,7 +19,7 @@ import com.example.viewdemo.fragment.frags.MainFragment;
 import com.example.viewdemo.fragment.ui.BottomNavigatorLayout;
 import com.example.viewdemo.fragment.ui.FragmentViewPager;
 import com.example.viewdemo.fragment.ui.WebBrowser;
-import com.example.viewdemo.manager.ActivityRecorder;
+import com.example.lib_base.framework.ActivityRecorder;
 
 /**
  * <pre>

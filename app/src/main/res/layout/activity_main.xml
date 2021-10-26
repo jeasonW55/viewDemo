@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/bg_dog"
     tools:context=".activities.MainActivity">
 
     <TextView
@@ -84,17 +85,30 @@
         android:text="底部弹窗"/>
 
     <TextView
-        android:layout_marginTop="@dimen/dp_20"
-        android:layout_centerHorizontal="true"
-        android:background="@drawable/rect_bt_bg"
-        android:layout_below="@id/bottom_dialog"
         android:id="@+id/otherlayout"
-        android:gravity="center"
-        android:textColor="@color/green"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
-        android:textSize="15sp"
-        android:text="一些布局"/>
+        android:layout_below="@id/bottom_dialog"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/dp_20"
+        android:background="@drawable/rect_bt_bg"
+        android:gravity="center"
+        android:text="一些布局"
+        android:textColor="@color/green"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/document"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/otherlayout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/dp_20"
+        android:background="@drawable/rect_bt_bg"
+        android:gravity="center"
+        android:text="一些资料"
+        android:textColor="@color/green"
+        android:textSize="15sp" />
 
 
 </RelativeLayout>

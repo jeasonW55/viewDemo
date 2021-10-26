@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.example.viewdemo.ui.AdvertisementLayout
+<com.example.lib_base.ui.AdvertisementLayout
     android:id="@+id/layout_advertisement"
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
@@ -15,14 +15,14 @@
     <TextView
         android:id="@+id/tv_show_ads_timer"
         android:background="@drawable/common_corner_rect_bg_white"
-        android:textSize="@dimen/font_sp_12"
+        android:textSize="12sp"
         android:textColor="@color/grey"
         android:gravity="center"
-        android:text="@string/left_seconds"
+        android:text="关闭|3s"
         android:layout_marginBottom="@dimen/dp_20"
         android:layout_marginRight="@dimen/dp_20"
         android:layout_gravity="bottom|end"
         android:layout_width="@dimen/dp_50"
         android:layout_height="@dimen/dp_20"/>
 
-</com.example.viewdemo.ui.AdvertisementLayout>
+</com.example.lib_base.ui.AdvertisementLayout>

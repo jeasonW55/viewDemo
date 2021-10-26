@@ -1,4 +1,4 @@
-package com.example.viewdemo.ui;
+package com.example.lib_base.ui;
 
 import android.app.Activity;
 import android.content.Context;
@@ -9,9 +9,9 @@ import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.example.viewdemo.R;
+import com.example.lib_base.R;
 import com.example.lib_base.annotation.Layout;
-import com.example.viewdemo.manager.TaskManager;
+import com.example.lib_base.framework.TaskManager;
 
 /**
  * 广告类
@@ -24,11 +24,11 @@ public class AdvertisementLayout extends FrameLayout {
 
     private static final int[] mAdsArrays = {
             R.drawable.nvpushaonv,
-            R.drawable.chuyinweilai,
+            R.drawable.chuyinshaonv,
             R.drawable.haitanshaonv,
             R.drawable.yongzhuangshaonv,
             R.drawable.jianhunshaonv,
-            R.drawable.chengsanshaonv
+            R.drawable.chuyinshaonv2
             };
 
     private TextView mTvShowAdsTimer;

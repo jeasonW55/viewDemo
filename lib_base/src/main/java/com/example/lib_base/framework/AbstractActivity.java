@@ -1,4 +1,4 @@
-package com.example.viewdemo.activities;
+package com.example.lib_base.framework;
 
 import android.os.Bundle;
 import android.os.Handler;
@@ -8,9 +8,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.FragmentActivity;
 
-import com.example.viewdemo.manager.ActivityRecorder;
-import com.example.viewdemo.manager.TaskManager;
-import com.example.viewdemo.ui.AdvertisementLayout;
+import com.example.lib_base.ui.AdvertisementLayout;
 
 
 /**

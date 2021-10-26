@@ -6,6 +6,7 @@ import android.widget.FrameLayout;
 
 import androidx.annotation.NonNull;
 
+import com.example.lib_base.framework.AbstractActivity;
 import com.example.viewdemo.R;
 import com.example.lib_base.annotation.Layout;
 import com.example.viewdemo.fragment.ui.WebBrowser;

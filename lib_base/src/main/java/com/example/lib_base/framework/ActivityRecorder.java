@@ -1,11 +1,11 @@
-package com.example.viewdemo.manager;
+package com.example.lib_base.framework;
 
 import android.app.Activity;
 
 import androidx.fragment.app.FragmentActivity;
 
+import com.example.lib_base.annotation.Advertisement;
 import com.example.lib_base.annotation.Layout;
-import com.example.viewdemo.annotation.Advertisement;
 
 import java.util.ArrayList;
 import java.util.List;

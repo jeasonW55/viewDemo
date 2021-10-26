@@ -20,6 +20,7 @@ import androidx.annotation.Nullable;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.lib_base.framework.AbstractActivity;
 import com.example.viewdemo.R;
 import com.example.viewdemo.Url;
 import com.example.viewdemo.adapter.ExpandedBean;

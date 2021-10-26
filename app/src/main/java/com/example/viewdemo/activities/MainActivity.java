@@ -10,11 +10,12 @@ import android.net.Uri;
 import android.view.View;
 import android.widget.TextView;
 
+import com.example.lib_base.framework.AbstractActivity;
 import com.example.viewdemo.R;
 import com.example.viewdemo.Url;
 import com.example.viewdemo.adapter.DialogAdapter;
 import com.example.lib_base.annotation.Layout;
-import com.example.viewdemo.annotation.Advertisement;
+import com.example.lib_base.annotation.Advertisement;
 import com.google.android.material.bottomsheet.BottomSheetDialog;
 
 import java.util.ArrayList;
@@ -25,7 +26,7 @@ import java.util.List;
  */
 @SuppressLint("NonConstantResourceId")
 @Layout(layout = R.layout.activity_main)
-@Advertisement
+@Advertisement(adsLayout = R.layout.layout_show_advertisement)
 public class MainActivity extends AbstractActivity {
 
     public static final String NAME = "type";
